@@ -17,9 +17,9 @@ export class NodeService {
   getNodes() {
     let nodeParams = new HttpParams();
     let nodeHeaders = new HttpHeaders();
-    //const encodedUser = localStorage.getItem("encodedUser");
+    const encodedUser = localStorage.getItem("encodedUser");
 
-    //assignmentHeaders = assignmentHeaders.append('Authorization', 'Basic ' + encodedUser);
+    nodeHeaders = nodeHeaders.append('Authorization', 'Basic ' + encodedUser);
     nodeHeaders = nodeHeaders.append('Content-Type', "application/json");
 
     return this.http.get(this.nodeURL,
