@@ -13,6 +13,7 @@ import en from '@angular/common/locales/en';
 import { NodesComponent } from './pages/nodes/nodes.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MainComponent } from './pages/main/main.component';
+import { Page404Component } from './pages/page404/page404.component';
 
 registerLocaleData(en);
 
@@ -21,7 +22,8 @@ registerLocaleData(en);
     AppComponent,
     MainComponent,
     NodesComponent,
-    LoginComponent
+    LoginComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
