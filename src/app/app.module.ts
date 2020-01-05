@@ -12,12 +12,14 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { NodesComponent } from './pages/nodes/nodes.component';
 import { LoginComponent } from './pages/login/login.component';
+import { MainComponent } from './pages/main/main.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
+    MainComponent,
     NodesComponent,
     LoginComponent
   ],

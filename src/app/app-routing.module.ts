@@ -3,12 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { NodesComponent } from './pages/nodes/nodes.component';
 import { LoginComponent } from './pages/login/login.component';
+import { MainComponent } from './pages/main/main.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/login' },
-  //{ path: 'nodes', loadChildren: () => import('./pages/nodes/nodes.component').then(m => m.NodesComponent) }
   { path: 'login', component: LoginComponent },
-  { path: 'nodes', component: NodesComponent }
+  //{ path: 'nodes', loadChildren: () => import('./pages/nodes/nodes.component').then(m => m.NodesComponent) }
+  {
+    path: 'sma', component: MainComponent,
+    children: [
+      { path: 'nodes', component: NodesComponent }
+    ]
+  }
 ];
 
 @NgModule({

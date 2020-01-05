@@ -52,6 +52,7 @@ export class NodesComponent implements OnInit {
             el.last_heartbeat);
           this.nodeList.push(node);
         });
+        this.nodeList = [...this.nodeList];
         console.log(this.nodeList);
       },
       nodesError => {
